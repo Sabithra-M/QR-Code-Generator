@@ -30,7 +30,7 @@ This project helped me practice JavaScript DOM manipulation and working with ext
 
 ## Live Demo
 
-https://yourusername.github.io/qr-code-generator/
+https://sabithra-m.github.io/QR-Code-Generator/
 
 ## Project Demo
 
@@ -61,4 +61,4 @@ Aspiring Frontend Developer
 
 ## Connect With Me
 
-LinkedIn: https://linkedin.com/in/yourprofile
+LinkedIn: https://www.linkedin.com/in/sabithra-m/
