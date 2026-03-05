@@ -37,7 +37,7 @@ https://sabithra-m.github.io/QR-Code-Generator/
 ### Main Interface
 ![UI](ui.png)
 ### Generated QR Code
-![QR result]([qr-result.png](https://github.com/Sabithra-M/QR-Code-Generator/blob/main/screenshots/qr-result.png))
+![QR result](qr-result.png)
 
 ## Learning Outcomes
 
