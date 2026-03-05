@@ -34,8 +34,10 @@ https://sabithra-m.github.io/QR-Code-Generator/
 
 ## Project Demo
 
-[Main page!](screenshot 1.png)
-[QR Code generate!](screenshot 2.png)
+### Main Interface
+![UI](ui.png)
+### Generated QR Code
+![QR result](qr-result.png)
 
 ## Learning Outcomes
 
