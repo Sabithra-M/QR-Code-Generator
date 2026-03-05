@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>QR Code Generator</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="conrainer">
+        <h1>QR Code Generator</h1>
+        <input type="search" id="text" placeholder="Enter text or URL">
+        <div id="qrcode"></div>
+        <!-- <button id="del-btn">Clear</button> -->
+        <button class="generate-btn" onclick="getQRCode()">Generate QR Code</button>
+        
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.min.js"></script>
+    <script>
+        function getQRCode()
+        {
+            var inputBox = document.getElementById("text").value;
+            var divContainer = document.getElementById("qrcode");
+            divContainer.innerHTML=""
+            if(inputBox.trim() !== ""){
+                new QRCode(divContainer, {text: inputBox, width: 150, height: 150});
+                
+                divContainer.style.padding = "20px";
+                divContainer.style.backgroundColor = "#f6d7c3";
+                divContainer.style.border = "1px solid rgb(255, 194, 155, 0.30)";
+                divContainer.style.marginTop = "30px";
+
+                // paragraph tag create
+                var para = document.createElement("p");
+                para.innerHTML= '<a href="' + inputBox + '">' + inputBox + '</a>';
+                para.setAttribute("class", "Link-Para");
+                divContainer.appendChild(para);
+
+                // clear button create
+                var deleteButton = document.createElement("button");
+                deleteButton.innerHTML="Clear"
+                deleteButton.setAttribute("class","del-btn");
+                divContainer.appendChild(deleteButton);
+
+                document.querySelector(".del-btn").addEventListener("click", () =>{
+                divContainer.innerHTML= "";
+
+                divContainer.style.padding = "0";
+                divContainer.style.backgroundColor = "none";
+                divContainer.style.border = "none";
+                divContainer.style.marginTop = "0";
+            })
+
+            }
+            else{
+                divContainer.innerHTML= "";
+                 divContainer.style.padding = "0";
+                divContainer.style.backgroundColor = "none";
+                divContainer.style.border = "none";
+                divContainer.style.marginTop = "0";
+            }
+        }
+    </script>
+</body>
+</html>
